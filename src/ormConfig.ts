@@ -1,8 +1,8 @@
-import { ConnectionOptions } from "typeorm";
+import { ConnectionOptions } from 'typeorm';
 
 const defaultConnectionOptions: ConnectionOptions = {
   type: "postgres",
-  database: "nuber",
+  database: process.env.DB_NAME || "nuber",
   synchronize: true,
   logging: false,
   entities: ["entities/**/*.*"],
